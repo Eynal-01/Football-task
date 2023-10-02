@@ -1,0 +1,39 @@
+*{
+    user-select: none;
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-color: rgba(44, 255, 2, 0.863);
+    margin:10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top:2%;
+}
+
+#Score{
+    margin-bottom: 2%;
+}
+
+#player1{
+    color:white;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 20px;
+}
+
+#player2{
+    color:white;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 20px;
+}
+
+#canvas{
+    background: url("images/stadium.png"), no-repeat;
+    background-size: cover;
+    background-position: center;
+}
