@@ -62,7 +62,7 @@ function reset() {
 	player1.score = score1;
 	player2 = new Player(600, 250);
 	player2.score = score2;
-	ball = new Ball(350, 250);
+	ball = new Ball(355, 240);
 	wDown = false;
 	sDown = false;
 	aDown = false;
@@ -348,56 +348,42 @@ document.onkeydown = function (e) {
 }
 
 function renderBall() {
-	context.save();
-	context.beginPath();
 	context.fillStyle = "transparent";
 	let img = new Image();
-	img.src = "images/bal.png";
+	img.src = "images/ball.png";
 	context.drawImage(img,ball.x-17, ball.y-18, ball.size+15,ball.size+15);
 	context.arc(ball.x, ball.y, ball.size, 0, Math.PI * 2);
 	context.fill();
-	context.closePath();
-	context.restore();
 }
 
 function renderPlayers() {
 	context.save();
 	context.fillStyle = "transparent";
-	context.beginPath();
 	let img = new Image();
 	img.src = "images/player2.png";
 	context.drawImage(img,player1.x-40, player1.y-40, 85,80);
 	context.arc(player1.x,player1.y,player1.size,0,Math.PI*2);
 	context.fill();
-	context.closePath();
-	context.beginPath();
 	let img2 = new Image();
 	img2.src = "images/player1.png";
 	context.drawImage(img2,player2.x-40, player2.y-40, 85,80);
 	context.arc(player2.x,player2.y,player1.size,0,Math.PI*2);
 	context.fill();
-	context.closePath();
-	context.restore();
 }
 
 function renderGates() {
 	let With = 21;
-	context.save();
 	context.beginPath();
 	context.moveTo(0, 175);
 	context.lineTo(0, 290);
 	context.strokeStyle = "white";
 	context.lineWidth = With;
 	context.stroke();
-	context.closePath();
-	context.beginPath();
 	context.moveTo(canvas.width, 175);
 	context.lineTo(canvas.width, 290);
 
 	context.lineWidth = With;
 	context.stroke();
-	context.closePath();
-	context.restore();
 }
 
 function clear() {
